@@ -16,10 +16,10 @@ function App() {
         <div className="max-w-6xl mx-auto min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Services" element={<Services />} />
+            <Route path="/Contact" element={<Contact />} />
           </Routes>
         </div>
       </BrowserRouter>

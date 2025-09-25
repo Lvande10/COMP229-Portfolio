@@ -25,10 +25,10 @@ export default function NavBar() {
   // Define navigation links for the navbar 
   const navbarLocations = [
     { to: "/", label: "Home" },
-    { to: "/about", label: "About Me" },
-    { to: "/projects", label: "Projects" },
-    { to: "/services", label: "Services" },
-    { to: "/contact", label: <span>Contact</span> },
+    { to: "/About", label: "About Me" },
+    { to: "/Projects", label: "Projects" },
+    { to: "/Services", label: "Services" },
+    { to: "/Contact", label: "Contact" },
   ];
 
   return (
