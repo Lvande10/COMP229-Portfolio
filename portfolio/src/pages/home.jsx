@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <main>
       {/* Introduction Section */}
-      <section className="h-80 mb-10">
+      <section className="mt-20 justify-center flex align-middle flex-col">
         <h1 className="text-5xl font-bold text-black dark:text-white mb-2">
           <span className="">Hi there!</span>
           <span className="font-bold">
@@ -22,24 +22,26 @@ export default function Home() {
           </span>{" "}
           who transforms ideas into powerful web applications and workflows.{" "}
           <br />
-          Take a look around to see how I can help elevate your digital
-          presence.
+          <br/>
+          My mission is to deliver <span className="font-semibold">clean</span>, <span className="font-semibold">efficient</span> code and intuitive designs
+          that help businesses achieve their digital goals all while maintaining a strong focus on <span className="font-semibold">security</span> and <span className="font-semibold">performance</span>.
         </h2>
         <Link
           to="/about"
-          className="font-semibold transition duration-400 ease-in-out border-b border-transparent hover:border-blue-700  px-4 py-2 text-gray-800 dark:text-white rounded-md bg-blue-200 dark:bg-gray-800 shadow-md"
+          className="
+          mx-auto
+          text-xl
+          px-4 py-2
+          font-semibold 
+          transition duration-400 ease-in-out 
+          border-b border-transparent hover:border-blue-700 
+          text-gray-800 dark:text-white 
+          rounded-xl 
+          bg-blue-200 dark:bg-gray-800 shadow-md
+          "
         >
           About Me
         </Link>
-      </section>
-
-      {/* Mission Statement Section */}
-      <section>
-        <h2 className="text-4xl font-bold mb-1">Mission Statement</h2>
-        <p>
-          My mission is to deliver clean, efficient code and intuitive designs
-          that help businesses achieve their digital goals all while{" "}
-        </p>
       </section>
     </main>
   );

@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         {/* give global margin between navbar and content */}
-        <div className="mt-24 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -23,6 +23,11 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+      <footer className="text-center p-4 mt-10 border-t">
+        <p className="text-sm text-gray-500">
+          &copy; {new Date().getFullYear()} Lucas Vandermaarel
+        </p>
+      </footer>
     </div>
   );
 }

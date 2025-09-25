@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LogoImg from "../assets/Logo.png";
 import { HiMenu, HiX } from "react-icons/hi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle.jsx";
 import {
   Navbar,
@@ -15,10 +15,14 @@ import {
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
-  {
-    /* Define navigation links for the navbar */
-  }
+  // Close the mobile menu when navigating to a new page
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  // Define navigation links for the navbar 
   const navbarLocations = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About Me" },
@@ -28,7 +32,7 @@ export default function NavBar() {
   ];
 
   return (
-    <Navbar maxWidth="full" onMenuOpenChange={setIsOpen} className="rounded-2xl bg-gray-700/20">
+    <Navbar maxWidth="full" isMenuOpen={isOpen} onMenuOpenChange={setIsOpen} className="mb-10 rounded-2xl bg-gray-700/20">
       <NavbarContent className="sm:hidden" justify="start">
         {/* Mobile menu toggle button */}
         <NavbarMenuToggle
@@ -43,7 +47,8 @@ export default function NavBar() {
           }
         />
       </NavbarContent>
-      {/* Logo Section */}
+
+      {/* Logo */}
       <NavbarContent className="hidden sm:flex" justify="start">
         <NavbarBrand>
           <Link to="/">
@@ -58,7 +63,7 @@ export default function NavBar() {
         </NavbarBrand>
       </NavbarContent>
 
-      {/* Desktop menu content */}
+      {/* Desktop menu */}
       <NavbarContent justify="center" className="hidden sm:flex gap-6">
         {navbarLocations.map(({ to, label }) => (
           <NavbarItem key={to}>
@@ -72,10 +77,10 @@ export default function NavBar() {
         </NavbarItem>
       </NavbarContent>
 
-      {/* Mobile menu content */}
-      <NavbarMenu>
+      {/* Mobile menu */}
+      <NavbarMenu className="pt-6 mt-4 scrollbar-hide space-y-4">
         {navbarLocations.map(({ to, label }, index) => (
-          <NavbarMenuItem key={`${to}-${index}`}>
+          <NavbarMenuItem key={`${to}-${index}`} className="mx-auto">
             <Link className="w-full" color="primary" to={to} size="lg">
               {label}
             </Link>

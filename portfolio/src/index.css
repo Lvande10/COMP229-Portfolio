@@ -1,14 +1,42 @@
+
+/* Tailwind CSS and Hero UI integration */
 @import "tailwindcss";
 @plugin '../hero.ts';
-/* Note: You may need to change the path to fit your project structure */
 @source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
 
 
-.light {
+/* Custom styles for light and dark mode backgrounds with smooth transitions */
+body {
+    transition: color 1s ease;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: opacity 1s ease;
+}
+
+body::before {
     background: linear-gradient(to bottom, #efc894, #ffffff);
 }
 
-.dark {
+body::after {
     background: linear-gradient(to bottom, #0d1117, #1f2837);
+    opacity: 0;
 }
+
+.dark body::before {
+    opacity: 0;
+}
+
+.dark body::after {
+    opacity: 1;
+}
+

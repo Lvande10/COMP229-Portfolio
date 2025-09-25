@@ -13,6 +13,14 @@ import resumePDF from "../assets/Lucas_Vandermaarel_-_Systems_Engineer.pdf";
 export default function About() {
   const [isOpen, onOpenChange] = useState(false);
 
+  // Check if device is mobile
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  const handleDownload = () => {
+    // Open the PDF in a new tab
+    window.open(resumePDF, "_blank");
+  }
+
   return (
     <>
       <section>
@@ -22,7 +30,7 @@ export default function About() {
           className="justify-self-center w-56 rounded-full border-2 border-gray-300"
         />
       </section>
-      <p>Lucas Vandermaarel</p>
+      <p className="text-2xl">Lucas Vandermaarel</p>
       <div className="space-y-6">
         <p className="text-xl text-center font-medium text-primary mb-8">
           Full-stack Developer | DevOps Engineer
@@ -31,7 +39,7 @@ export default function About() {
           variant="solid"
           color="primary"
           size="lg"
-          onPress={onOpenChange}
+          onPress={isMobile ? handleDownload : onOpenChange}
         >
           Download Resume
         </Button>
@@ -86,6 +94,7 @@ export default function About() {
         size="5xl"
         scrollBehavior="inside"
         backdrop="blur"
+        hidden={isMobile} // Hide modal on mobile devices
       >
         <ModalContent>
           {(onClose) => (
