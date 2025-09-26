@@ -37,7 +37,7 @@ export default function About() {
         </p>
         <Button
           variant="solid"
-          color="primary"
+          className="bg-primary/80 text-foreground"
           size="lg"
           onPress={isMobile ? handleDownload : onOpenChange}
         >

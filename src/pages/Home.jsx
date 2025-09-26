@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 export default function Home() {
   return (
-    <main>
+    <main className="justify-center flex align-middle flex-col min-h-[65vh]">
       {/* Introduction Section */}
-      <section className="mt-20 justify-center flex align-middle flex-col">
+      <section className="">
         <h1 className="text-5xl font-bold text-black dark:text-white mb-2">
           <span className="">Hi there!</span>
           <span className="font-bold">

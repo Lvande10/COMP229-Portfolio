@@ -9,11 +9,11 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div>
       <BrowserRouter>
         <NavBar />
         {/* give global margin between navbar and content */}
-        <div className="max-w-6xl mx-auto min-h-screen">
+        <div className="max-w-6xl mx-auto min-h-[75vh]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
@@ -23,9 +23,11 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
-      <footer className="text-center p-4 mt-10 border-t">
+      <footer className="mt-auto text-center p-4 border-t">
         <p className="text-sm text-gray-500">
           &copy; {new Date().getFullYear()} Lucas Vandermaarel
+          <br/>
+          All resources are original or sourced from free-to-use, attribution free libraries
         </p>
       </footer>
     </div>
