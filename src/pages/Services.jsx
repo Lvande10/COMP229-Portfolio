@@ -1,6 +1,6 @@
 import WebDevelopmentImage from "../assets/servicesImages/web_development.png";
 import AutomationIntegrationImage from "../assets/servicesImages/automation_integration.png";
-import MigrationDeploymentImage from "../assets/servicesImages/onPremToCloud.png";
+import MigrationDeploymentImage from "../assets/servicesImages/onpremToCloud.png";
 import ConsultImage from "../assets/servicesImages/consult.png";
 import { Link } from "react-router-dom";
 
