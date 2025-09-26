@@ -6,7 +6,7 @@ import AMiAdminPanel from "../assets/projectImages/AMi/AMi_admin_panel.png";
 import AMiImageGen from "../assets/projectImages/AMi/AMi_image_gen.png";
 import AMiSessionChat from "../assets/projectImages/AMi/AMi_session_and_chat.png";
 import RockyWestLanding from "../assets/projectImages/RockyWest/rockywest_landing.png";
-import VanderlochLanding from "../assets/projectImages/Vanderloch/Vanderloch.png";
+import VanderlochLanding from "../assets/projectImages/Vanderloch/vanderloch.png";
 
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
