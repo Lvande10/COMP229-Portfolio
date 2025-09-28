@@ -27,7 +27,7 @@ export default function About() {
         <img
           src={headshot}
           alt="Headshot of Lucas Vandermaarel"
-          className="justify-self-center w-56 rounded-full border-2 border-gray-300"
+          className="mx-auto w-56 rounded-full border-2 border-gray-300"
         />
       </section>
       <p className="text-2xl">Lucas Vandermaarel</p>
